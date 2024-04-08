@@ -5,14 +5,19 @@ from portfolio.views.header.header import header
 from portfolio.views.links.links import links
 from portfolio.views.footer.footer import footer
 
+
 class State(rx.State):
     pass
 
+
 def index() -> rx.Component:
-    return rx.vstack(
+    return rx.box(
         navbar(),
-        header(),
-        links(),
+        rx.vstack(
+            header(),
+            links(),
+            max_witdh="600px"
+        ),
         footer()
     )
 

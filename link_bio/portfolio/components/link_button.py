@@ -1,5 +1,5 @@
 import reflex as rx
 
 
-def link_button() -> rx.Component:
-    return rx.button("Proyectos")
+def link_button(text: str) -> rx.Component:
+    return rx.button(text)
